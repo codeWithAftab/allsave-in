@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-
+import logo from "./logo.svg";
+import "./App.css";
+import Footer from "./components/Footer";
+import Main from "./components/Main";
+import Resources from "./components/Resources";
+import Navbar from "./components/Navbar";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  useNavigationType,
+  useNavigate,
+} from "react-router-dom";
+import { useState } from "react";
 function App() {
+  const [Brand, setBrand] = useState("Allsave.in");
+  const [title, settitle] = useState("Online Video Downloader.");
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<><Navbar brand={Brand}/> <Footer brand={Brand}/></>}>
+            <Route index  element={<><Main title={title} settitle={settitle} /> <Resources/> </>}/>
+            </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

@@ -1,33 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Finlandica:wght@600&display=swap');
 :root {
     --purple: #a59ef0;
@@ -175,78 +145,6 @@ footer {
     height: 60px;   /* Height of the footer */
     /* background: #6cf; */
  }
- #invalidate{
-    border: 2px solid red;
-    /* background-color: #282c34; */
-}
-.invalid{
-    color: rgb(229, 73, 73);
-    display: block;
-}
-
-/* .how-to-download{
-    color: blue;
-} */
-
-/* loading screeen */
-* {
-    box-sizing: border-box;
-  }
-  :root {
-    --bg: #1c1717;
-  }
-  /* body {
-    min-height: 100vh;
-    background: var(--bg);
-    display: grid;
-    place-items: center;
-  } */
-  @property --a {
-    initial-value: 0deg;
-    inherits: false;
-    syntax: '<angle>';
-  }
-  @property --h {
-    initial-value: 0;
-    inherits: false;
-    syntax: '<number>';
-  }
-  .loader {
-    
-    padding: 1rem 1rem;
-    font-family: monospace;
-    font-weight: bold;
-    background-color: var(--bg);
-    color: rgb(255, 255, 255);
-    border-style: solid;
-    border-width: 1vmin;
-    font-size: 1rem;
-    --charge: hsl(var(--h, 0), 70%, 50%);
-    -o-border-image: conic-gradient(var(--charge) var(--a), transparent calc(var(--a) + 0.5deg)) 30;
-       border-image: conic-gradient(var(--charge) var(--a), transparent calc(var(--a) + 0.5deg)) 30;
-    -webkit-animation: load 2s infinite ease-in-out;
-            animation: load 2s infinite ease-in-out;
-  }
-  @-webkit-keyframes load {
-    0%, 10% {
-      --a: 0deg;
-      --h: 0;
-    }
-    100% {
-      --a: 360deg;
-      --h: 100;
-    }
-  }
-  @keyframes load {
-    0%, 10% {
-      --a: 0deg;
-      --h: 0;
-    }
-    100% {
-      --a: 360deg;
-      --h: 100;
-    }
-  }
 
 @media screen and (max-width: 800px) {
     body {
@@ -284,16 +182,5 @@ footer {
         width: 100%;
         height: 60px;   /* Height of the footer */
         /* background: #6cf; */
-    }
-
- 
-    
-}
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+     }
 }
