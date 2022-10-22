@@ -25,13 +25,13 @@ export default function resources() {
               </Link>
             </div>
             <div className="logos text-center">
-              <Link className="btn" to="http://instagram.com">
+              <Link className="btn" to="/twitter-downloader">
                 <img src="./assets/images/twitter.png" alt="" srcSet />
                 <div className="logo-text">Twitter</div>
               </Link>
             </div>
             <div className="logos text-center">
-              <Link className="btn" to="http://instagram.com">
+              <Link className="btn" to="/youtube-downloader">
                 <img src="./assets/images/youtube.png" alt="" srcSet />
                 <div className="logo-text">YouTube</div>
               </Link>

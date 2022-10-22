@@ -22,9 +22,17 @@ function App() {
         <Routes>
           <Route path="/" element={<><Navbar brand={Brand}/> <Footer brand={Brand}/></>}>
             <Route index  element={<><Main title={title} settitle={settitle} /> <Resources/> </>}/>
+            <Route path="/instagram-downloader" element={<><Main title={"Instagram video Dowloader"} /> <Resources/> </>} />
+            <Route path="/facebook-downloader" element={<><Main title={"Facebook video Dowloader"} /> <Resources/> </>} />
+            <Route path="/youtube-downloader" element={<><Main title={"Youtube video Dowloader"} /> <Resources/> </>} />
+            <Route path="/twitter-downloader" element={<><Main title={"Twitter video Dowloader"} /> <Resources/> </>} />
             </Route>
         </Routes>
       </BrowserRouter>
+      {/* <Navbar brand={Brand}/>
+      <Main title={title} settitle={settitle} /> 
+      <Resources/> 
+      <Footer brand={Brand}/> */}
     </>
   );
 }

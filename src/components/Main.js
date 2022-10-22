@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { Outlet } from "react-router-dom";
+// import { Outlet } from "react-router-dom";
 
 export default function Main(props) {
   // const [title, settitle] = useState("Online Video Downloader.");
@@ -20,7 +20,7 @@ export default function Main(props) {
   }
   const validateSearchBox = (mytext) => {
     
-    if (mytext!="" && !validURL(mytext)) {
+    if (mytext!=="" && !validURL(mytext)) {
       seterrorMsg({
         status:true,
         text: "Error : Enter valid url in input box...",
@@ -28,7 +28,7 @@ export default function Main(props) {
         id_for_Box: "invalidate",
       });
     }
-    else if (mytext=="") {
+    else if (mytext==="") {
       seterrorMsg({
         status:true,
         text: "Error : Search box not can be empty..",
@@ -46,7 +46,7 @@ export default function Main(props) {
   };
 
   function getDownloadLink(){
-    if (!errorMsg.status && text != ""){
+    if (!errorMsg.status && text !== ""){
       setisLoading(true)
     }
     else{
@@ -63,11 +63,12 @@ export default function Main(props) {
       <div className="container">
         <div className="search-system">
           <div className="title mt-2">
-            <div className="heading">{props.title}</div>
+          
+            <div className="heading"> <i class="fa fa-download"></i> {props.title}</div>
             <div className="sub-heading">Paste your video link below.</div>
           </div>
           <div  className="search-bar text-center input-group my-4 ">
-            {/* <form class=" search-bar text-center input-group needs-validation" novalidate> */}
+            {/* <form className=" search-bar text-center input-group needs-validation" novalidate> */}
             <input
               type="text"
               id= {`${errorMsg.id_for_Box}`}
@@ -92,14 +93,14 @@ export default function Main(props) {
             </span>
             {/* </form> */}
           </div>
-          <div class={`form-label ${errorMsg.classNameText}`}>{errorMsg.text}</div>
+          <div className={`form-label ${errorMsg.classNameText}`}>{errorMsg.text}</div>
 
           <div className="how-to-download h4 mt-3">
             <a href="#">How to download video from Allsave.in</a>
           </div>
         </div>
         {
-        isLoading && <div class="loader w-50 m-auto mb-5">Processing the link to download. Stay on the page.</div>
+        isLoading && <div className="loader w-50 m-auto mb-5">Processing the link to download. Stay on the page.</div>
         }
       </div>
       {/* <Outlet />  */}
